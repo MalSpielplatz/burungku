@@ -3,8 +3,7 @@ from pathlib import  Path
 # Since streamlit doesn't allow a python setup.py install, we have to add the rcfx folder by hand.
 module_path = str(Path().absolute() / "rcfx")
 sys.path.append(module_path)
-# For debug.
-print(module_path)
+sys.path.append("../rcfx")
 
 
 from librosa.core import audio
