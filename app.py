@@ -16,7 +16,7 @@ import numpy as np
 import soundfile as sf
 
 import io
-from .model import (
+from model import (
     read_audio_fast,
     get_model_predictions_for_clip,
     BIRDS,
@@ -24,7 +24,7 @@ from .model import (
 )
 
 
-from .utils import top_bird_bar_plot
+from utils import top_bird_bar_plot
 import pandas as pd
 
 
