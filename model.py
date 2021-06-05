@@ -499,7 +499,8 @@ def load_pretrained_model():
         fmax=MAX_FREQ,
     )
     # This is where the pretrained weights are saved.
-    model_path = "./models/cnn14.pth"
+    # TODO: Change to an absolute path.
+    model_path = "models/cnn14.pth"
     if not os.path.exists(model_path):
         print("Downloading model")
         urllib.request.urlretrieve(MODEL_URI, model_path)
