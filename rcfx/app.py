@@ -1,9 +1,9 @@
-import sys
-from pathlib import  Path
-# Since streamlit doesn't allow a python setup.py install, we have to add the rcfx folder by hand.
-module_path = str(Path().absolute() / "rcfx")
-sys.path.append(module_path)
-sys.path.append("../rcfx")
+# import sys
+# from pathlib import  Path
+# # Since streamlit doesn't allow a python setup.py install, we have to add the rcfx folder by hand.
+# module_path = str(Path().absolute() / "rcfx")
+# sys.path.append(module_path)
+# sys.path.append("../rcfx")
 
 
 from librosa.core import audio
@@ -16,7 +16,7 @@ import numpy as np
 import soundfile as sf
 
 import io
-from rcfx.model import (
+from .model import (
     read_audio_fast,
     get_model_predictions_for_clip,
     BIRDS,
@@ -24,7 +24,7 @@ from rcfx.model import (
 )
 
 
-from rcfx.utils import top_bird_bar_plot
+from .utils import top_bird_bar_plot
 import pandas as pd
 
 
