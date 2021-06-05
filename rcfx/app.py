@@ -1,3 +1,11 @@
+import sys
+from pathlib import  Path
+# Since streamlit doesn't allow a python setup.py install, we have to add the rcfx folder by hand.
+module_path = str(Path().absolute() / "rcfx")
+sys.path.append(module_path)
+
+
+
 from librosa.core import audio
 from matplotlib.pyplot import plot
 import streamlit as st
@@ -14,11 +22,7 @@ from rcfx.model import (
     BIRDS,
     load_pretrained_model,
 )
-import sys
-from pathlib import  Path
-# Since streamlit doesn't allow a python setup.py install, we have to add the rcfx folder by hand.
-module_path = str(Path().absolute() / "rcfx")
-sys.path.append(module_path)
+
 
 from rcfx.utils import top_bird_bar_plot
 import pandas as pd
