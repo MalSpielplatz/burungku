@@ -135,9 +135,9 @@ if uploaded_audio_file is not None:
 
     audio_signal, sampling_rate = sf.read(io.BytesIO(audio_bytes))
 
-    with st.beta_container():
+    with st.container():
         st.subheader("Some frequency features", )
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
         with col1:
             plot_mel_spectogram(audio_signal)
         with col2:
@@ -153,12 +153,12 @@ if uploaded_audio_file is not None:
         with st.spinner("The model is computing..."):
             df = get_top_birds_classification(y)
 
-            with st.beta_container():
+            with st.container():
                 top_ebird_code = df.tail(1)["ebird"]
                 bird_info = tx_df.loc[top_ebird_code].to_dict()
                 st.subheader("Some information for the top bird")
                 st.write(bird_info)
-            with st.beta_container():
+            with st.container():
                 # Plasma scale 5 colors.
                 df["color"] = [
                     "#0d0887",
